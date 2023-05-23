@@ -2488,10 +2488,11 @@
                                             </div>
                                             <div class="col-lg-12">
                                                 <!-- single-product-wrap start -->
+                                                {% for product in products %}
                                                 <div class="single-product-wrap">
                                                     <div class="product-image">
                                                         <a href="single-product.html">
-                                                            <img src="images/product/large-size/9.jpg" alt="Li's Product Image">
+                                                            <img src="{(product.image.url)}" alt="Li's Product Image">
                                                         </a>
                                                         <span class="sticker">New</span>
                                                     </div>
@@ -2499,7 +2500,7 @@
                                                         <div class="product_desc_info">
                                                             <div class="product-review">
                                                                 <h5 class="manufacturer">
-                                                                    <a href="shop-left-sidebar.html">Graphic Corner</a>
+                                                                    <a href="shop-left-sidebar.html">Mwirigih</a>
                                                                 </h5>
                                                                 <div class="rating-box">
                                                                     <ul class="rating">
@@ -2511,9 +2512,9 @@
                                                                     </ul>
                                                                 </div>
                                                             </div>
-                                                            <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a></h4>
+                                                            <h4><a class="product_name" href="single-product.html">{(product.name)}</a></h4>
                                                             <div class="price-box">
-                                                                <span class="new-price">$46.80</span>
+                                                                <span class="new-price">{(product.price)}</span>
                                                             </div>
                                                         </div>
                                                         <div class="add-actions">
@@ -2525,6 +2526,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                {% end for %}
                                                 <!-- single-product-wrap end -->
                                             </div>
                                             <div class="col-lg-12">
