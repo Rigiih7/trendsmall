@@ -1,22 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Products
+from .models import Products, Laptops
 
 # Create your views here.
 def index(request):
 
     products = Products.objects.all()
+
+    laptops = Laptops.objects.all()
     
-    return render(request, "index.html", {'products' : products})
+    return render(request, "index.html", {'products' : products, 'laptops' : laptops})
 
-    if not request.session.has_key("currency"):
-        request.session["currency"] = settings.DEFAULT_CURRENCY
 
-def selectcurrency(request):
-    lasturl = request.META.get('HTTP_REFERER')    
-    if request.method == 'post' :
-        request.session['currency'] = request.POST['currency']
-    return HttpResponseRedirect(lasturl)
 
 
 
