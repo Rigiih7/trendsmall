@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages', 
     'django.contrib.staticfiles',
+    'currencies',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'currencies.context_processors.currencies',
             ],
         },
     },
@@ -108,10 +110,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
+DEFAULT_CURRENCY = 'KSH'
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
-
+ 
 USE_I18N = True
 
 USE_L10N = True
