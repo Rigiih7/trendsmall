@@ -9,5 +9,5 @@ class Laptops(models.Model):
     image = models.ImageField(upload_to='images/products/large-size')
     name = models.CharField(max_length=500)
     price = models.IntegerField()
-     
-    
+    oldprice = models.IntegerField(null=True)
+    dicount_percentage = models.IntegerField(null=True)
