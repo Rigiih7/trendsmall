@@ -10,4 +10,5 @@ class Laptops(models.Model):
     name = models.CharField(max_length=500)
     price = models.IntegerField()
     oldprice = models.IntegerField(null=True)
-    dicount_percentage = models.IntegerField(null=True)
+    discount_percentage = models.IntegerField(null=True)
+

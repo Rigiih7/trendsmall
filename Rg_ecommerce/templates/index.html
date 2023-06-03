@@ -659,7 +659,7 @@
                                         
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="single-product.html">
+                                                <a href="singleproduct.html">
                                                     <img src="{{product.image.url}}" alt="Li's Product Image">
                                                 </a>
                                                 <span class="sticker">-18%</span>
@@ -680,7 +680,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h4><a class="product_name" href="single-product.html">{{product.name}}</a></h4>
+                                                    <h4><a class="product_name" href="singleproduct.html">{{product.name}}</a></h4>
                                                     <div class="price-box">
                                                         <span class="new-price">KSh {{product.price}}</span>
                                                     </div>
@@ -756,7 +756,7 @@
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="single-product.html">
+                                                <a href="{% url 'singleproduct' %}">
                                                     <img src="{{laptop.image.url}}" alt="Li's Product Image">
                                                 </a>
                                                 <span class="sticker">New</span>
@@ -777,11 +777,11 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h4><a class="product_name" href="single-product.html">{{laptop.name}}</a></h4>
+                                                    <h4><a class="product_name" href="{% url 'singleproduct' %}">{{laptop.name}}</a></h4>
                                                     <div class="price-box">
-                                                        <span class="new-price">KSh {{ laptop.price }}</span>
+                                                        <span class="new-price"  >KSh  {{ laptop.price }}</span>
                                                         <span class="old-price">KSh {{ laptop.oldprice }}</span>
-                                                        <span class="discount-percentage">-{{ laptop.dicount_percentage }}%</span>
+                                                        <span class="discount-percentage">-{{ laptop.discount_percentage }}%</span>
                                                     </div>
                                                 </div>
                                                 <div class="add-actions">

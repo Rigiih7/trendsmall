@@ -11,6 +11,14 @@ def index(request):
     
     return render(request, "index.html", {'products' : products, 'laptops' : laptops})
 
+def singleproduct(request):
+
+    products = Products.objects.all()
+
+    laptops = Laptops.objects.all()
+
+    return render(request, "singleproduct.html", {'products' : products, 'laptops' : laptops})
+
 
 
 
