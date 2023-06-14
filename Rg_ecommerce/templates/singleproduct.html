@@ -439,53 +439,31 @@
             <div class="content-wraper">
                 <div class="container">
                     <div class="row single-product-area">
+                        {% for product in products %}
                         <div class="col-lg-5 col-md-6">
                            <!-- Product Details Left -->
                             <div class="product-details-left">
                                 <div class="product-details-images slider-navigation-1">
                                     <div class="lg-image">
-                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/1.jpg" data-gall="myGallery">
-                                            <img src="images/product/large-size/1.jpg" alt="product image">
+                                        <a class="popup-img venobox vbox-item" href="{% url 'singleproduct' %}" data-gall="myGallery">
+                                            <img src="{{product.image.url}}" alt="product image">
                                         </a>
                                     </div>
-                                    <div class="lg-image">
-                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/2.jpg" data-gall="myGallery">
-                                            <img src="images/product/large-size/2.jpg" alt="product image">
-                                        </a>
-                                    </div>
-                                    <div class="lg-image">
-                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/3.jpg" data-gall="myGallery">
-                                            <img src="images/product/large-size/3.jpg" alt="product image">
-                                        </a>
-                                    </div>
-                                    <div class="lg-image">
-                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/4.jpg" data-gall="myGallery">
-                                            <img src="images/product/large-size/4.jpg" alt="product image">
-                                        </a>
-                                    </div>
-                                    <div class="lg-image">
-                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/5.jpg" data-gall="myGallery">
-                                            <img src="images/product/large-size/5.jpg" alt="product image">
-                                        </a>
-                                    </div>
-                                    <div class="lg-image">
-                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/6.jpg" data-gall="myGallery">
-                                            <img src="images/product/large-size/6.jpg" alt="product image">
-                                        </a>
-                                    </div>
+                                    
                                 </div>
                                 <div class="product-details-thumbs slider-thumbs-1">                                        
-                                    <div class="sm-image"><img src="{% static 'images/product/small-size/1.jpg' %}" alt="product image thumb"></div>
-                                    <div class="sm-image"><img src="{% static 'images/product/small-size/2.jpg' %}" alt="product image thumb"></div>
-                                    <div class="sm-image"><img src="{% static 'images/product/small-size/3.jpg' %}" alt="product image thumb"></div>
-                                    <div class="sm-image"><img src="{% static 'images/product/small-size/4.jpg' %}" alt="product image thumb"></div>
-                                    <div class="sm-image"><img src="{% static 'images/product/small-size/5.jpg' %}" alt="product image thumb"></div>
-                                    <div class="sm-image"><img src="{% static 'images/product/small-size/6.jpg' %}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="{{product.image.url}}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="{{product.image.url}}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="{{product.image.url}}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="{{product.image.url}}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="{{product.image.url}}" alt="product image thumb"></div>
                                 </div>
                             </div>
                             <!--// Product Details Left -->
                         </div>
-
+                        {% endfor %}
+                    
+                        
                         <div class="col-lg-7 col-md-6">
                             <div class="product-details-view-content pt-60">
                                 <div class="product-info">
@@ -511,16 +489,9 @@
                                             </span>
                                         </p>
                                     </div>
-                                    <div class="product-variants">
-                                        <div class="produt-variants-size">
-                                            <label>Dimension</label>
-                                            <select class="nice-select">
-                                                <option value="1" title="S" selected="selected">40x60cm</option>
-                                                <option value="2" title="M">60x90cm</option>
-                                                <option value="3" title="L">80x120cm</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                
+
+
                                     <div class="single-add-to-cart">
                                         <form action="#" class="cart-quantity">
                                             <div class="quantity">
@@ -728,7 +699,7 @@
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="single-product.html">
+                                                <a href="{% url 'singleproduct' %}">
                                                     <img src="{% static 'images/product/large-size/1.jpg' %}" alt="Li's Product Image">
                                                 </a>
                                                 <span class="sticker">New</span>
