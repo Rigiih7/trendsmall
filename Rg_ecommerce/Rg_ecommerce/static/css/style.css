@@ -2759,20 +2759,15 @@ textarea:focus {
 /*  2.9 Footer
 /*----------------------------------------*/
 .footer {
-	background: #fff;
+	background: #f7f7f7;
 	border-top: 2px solid #e1e1e1;
-	position: absolute;
-  	bottom: 0;
-  	width: 100vw;
-	height: auto;
-	
 }
 .footer-static-top-3 {
 	background: #151414;
-	border-bottom: 2px solid #e1e1e1;
+	border-bottom: 2px solid #9d9999;
 }
 .footer-shipping {
-	border-bottom: 1px dashed #e1e1e1;
+	border-bottom: 2px dashed #928d8d;
 }
 .footer-static-top-3 .footer-shipping {
 	border-bottom: none;
@@ -2812,7 +2807,7 @@ textarea:focus {
 }
 /*Footer Middle*/
 .footer-logo-wrap {
-	border-bottom: 1px dashed #e1e1e1;
+	border-bottom: 2px dashed #e1e1e1;
 }
 .footer-static-middle .footer-logo p.info {
 	margin: 20px 0 25px;

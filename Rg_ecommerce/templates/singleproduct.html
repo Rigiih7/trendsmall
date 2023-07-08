@@ -439,13 +439,13 @@
             <div class="content-wraper">
                 <div class="container">
                     <div class="row single-product-area">
-                        {% for product in products %}
+                    
                         <div class="col-lg-5 col-md-6">
                            <!-- Product Details Left -->
                             <div class="product-details-left">
                                 <div class="product-details-images slider-navigation-1">
                                     <div class="lg-image">
-                                        <a class="popup-img venobox vbox-item" href="{% url 'singleproduct' %}" data-gall="myGallery">
+                                        <a class="popup-img venobox vbox-item" href="" data-gall="myGallery">
                                             <img src="{{product.image.url}}" alt="product image">
                                         </a>
                                     </div>
@@ -461,7 +461,7 @@
                             </div>
                             <!--// Product Details Left -->
                         </div>
-                        {% endfor %}
+                        
                     
                         
                         <div class="col-lg-7 col-md-6">
@@ -699,7 +699,7 @@
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="{% url 'singleproduct' %}">
+                                                <a href="">
                                                     <img src="{% static 'images/product/large-size/1.jpg' %}" alt="Li's Product Image">
                                                 </a>
                                                 <span class="sticker">New</span>

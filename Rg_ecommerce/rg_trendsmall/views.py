@@ -11,15 +11,22 @@ def index(request):
     
     return render(request, "index.html", {'products' : products, 'laptops' : laptops})
 
-def singleproduct(request):
+def singleproduct(request, id):
 
-    products = Products.objects.all()
+    products = Products.objects.filter(id = id).first()
 
-    laptops = Laptops.objects.all()
+    context = {
+        'products' : products,
+    }
 
-    return render(request, "singleproduct.html", {'products' : products, 'laptops' : laptops})
+    laptops = Laptops.objects.filter(id = id).first()
+
+    context = {
+        'laptops' : laptops,
+    }
 
 
+    return render(request, "singleproduct.html", context)
 
 
 
