@@ -1,3 +1,5 @@
+{% extends 'index.html' %}
+{% block content %}
 {% load static %}
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -446,13 +448,13 @@
                                 <div class="product-details-images slider-navigation-1">
                                     <div class="lg-image">
                                         <a class="popup-img venobox vbox-item" href="" data-gall="myGallery">
-                                            <img src="{{product.image.url}}" alt="product image">
+                                            <img src="{{product.image}}" alt="product image">
                                         </a>
                                     </div>
                                     
                                 </div>
                                 <div class="product-details-thumbs slider-thumbs-1">                                        
-                                    <div class="sm-image"><img src="{{product.image.url}}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="{{product.imag}}" alt="product image thumb"></div>
                                     <div class="sm-image"><img src="{{product.image.url}}" alt="product image thumb"></div>
                                     <div class="sm-image"><img src="{{product.image.url}}" alt="product image thumb"></div>
                                     <div class="sm-image"><img src="{{product.image.url}}" alt="product image thumb"></div>
@@ -1342,3 +1344,5 @@
 
 <!-- single-product31:32-->
 </html>
+
+{% endblock %}
