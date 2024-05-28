@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'Rg_ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'trendsmalldtbs',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
+        'NAME': 'trendsmall',
+        'USER': 'rigiih',
+        'PASSWORD': 'rigiih',
         'HOST': 'localhost',
     }
 }
