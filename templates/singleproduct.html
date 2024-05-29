@@ -7,54 +7,58 @@
 <head>
 
     {% include 'navbar.html' %}
-            </header>
-            <!-- Header Area End Here -->
-            <!-- Begin Li's Breadcrumb Area -->
-            <div class="breadcrumb-area">
-                <div class="container">
-                    <div class="breadcrumb-content">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active">Single Product</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Li's Breadcrumb Area End Here -->
-            <!-- content-wraper start -->
+</header>
             <div class="content-wraper">
                 <div class="container">
                     <div class="row single-product-area">
                     
-                        <div class="col-lg-5 col-md-6">
+                        <div class="col-lg-6 col-md-6">
+                        {% if product %}
                            <!-- Product Details Left -->
                             <div class="product-details-left">
+                                
+                                
                                 <div class="product-details-images slider-navigation-1">
                                     <div class="lg-image">
-                                        <a class="popup-img venobox vbox-item" href="" data-gall="myGallery">
-                                            <img src="{{product.image}}" alt="product image">
+                                        <a class="popup-img venobox vbox-item" href="{{ product.image.url }}" data-gall="myGallery">
+                                            <img src="{{product.image.url}}" alt="product image"> </a>
                                             <h4><a class="product_name" href="/products/{{product.id}}">{{product.name}}</a></h4>
                                                     <div class="price-box">
                                                         <span class="new-price"  >KSh  {{ product.price }}</span>
                                                         <span class="old-price">KSh {{ product.oldprice }}</span>
-                                                        <span class="discount-percentage">-{{ product.discount_percentage }}%
-                                        </a>
+                                                        <span class="discount-percentage">-{{ product.discount_percentage }}%</span>
+                
                                     </div>
-                                    
+                                    </div> 
                                 </div>
-                                {% if product %}
-                                <div class="product-details-thumbs slider-thumbs-1">                                        
-                                    <div class="sm-image"><img src="{{product.image.url}}" alt="product image thumb"></div>
-                                    
+                            </div>                                          
+                        
+                        {% elif laptop %}
+                           <!-- Product Details Left -->
+                            <div class="product-details-left">
+                                
+                                
+                                <div class="product-details-images slider-navigation-1">
+                                    <div class="lg-image">
+                                        <a class="popup-img venobox vbox-item" href="{{ laptop.image.url }}" data-gall="myGallery">
+                                            <img src="{{laptop.image.url}}" alt="product image"> </a>
+                                            <h4><a class="product_name" href="/products/{{product.id}}">{{product.name}}</a></h4>
+                                                    <div class="price-box">
+                                                        <span class="new-price"  >KSh  {{ product.price }}</span>
+                                                        <span class="old-price">KSh {{ product.oldprice }}</span>
+                                                        <span class="discount-percentage">-{{ product.discount_percentage }}%</span>
+                
+                                    </div>
+                                    </div> 
                                 </div>
-                                {% endif %}
-                            </div>
-                            <!--// Product Details Left -->
-                        </div>
+                            </div>                                          
+                        {% endif %}
+
+
+
                         
-                    
-                        
-                        <div class="col-lg-7 col-md-6">
+                    </div>                      
+                        <div class="col-lg-6 col-md-6">
                             <div class="product-details-view-content pt-60">
                                 <div class="product-info">
                                     <h2>Today is a good day Framed poster</h2>
@@ -130,6 +134,9 @@
                                                         <i class="fa fa-exchange"></i>
                                                     </div>
                                                     <p> Return policy (edit with Customer reassurance module)</p>
+
+
+
                                                 </div>
                                             </li>
                                         </ul>

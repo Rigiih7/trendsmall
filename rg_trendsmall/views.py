@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Products, Laptops
 
@@ -13,16 +13,19 @@ def index(request):
 
 def singleproduct(request, id):
 
-    products = Products.objects.filter(id = id).first()
+    product = Products.objects.filter(id = id).first()
+    laptop = Laptops.objects.filter(id = id).first()
+
+    if product:
+        data_source = 'product'
+    elif laptop:
+        data_source = 'laptop'
+    else:
+        data_source = None
 
     context = {
-        'products' : products,
-    }
-
-    laptops = Laptops.objects.filter(id = id).first()
-
-    context = {
-        'laptops' : laptops,
+        'product': product,
+        'laptop' : laptop,
     }
 
 
