@@ -28,7 +28,8 @@ def singleproduct(request, id):
 
     return render(request, "singleproduct.html", context)
 
-
-
+def shoppingcart(request):
+    
+    return render(request, 'shopping-cart.html')
 
    
